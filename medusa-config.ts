@@ -14,7 +14,7 @@ export default defineConfig({
     http: {
       storeCors: "http://localhost:3001",
       adminCors: "http://localhost:3001",
-      authCors: process.env.AUTH_CORS,
+      authCors: process.env.AUTH_CORS || "http://localhost:3001"
     },
   },
   modules: {
