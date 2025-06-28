@@ -9,12 +9,12 @@ export default defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     redisUrl: process.env.REDIS_URL,
-    jwtSecret: process.env.JWT_SECRET || "supersecret",
-    cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     http: {
       storeCors: "http://localhost:3001",
       adminCors: "http://localhost:3001",
-      authCors: process.env.AUTH_CORS || "http://localhost:3001"
+      authCors: process.env.AUTH_CORS || "http://localhost:3001",
+      jwtSecret: process.env.JWT_SECRET || "supersecret",
+      cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
   },
   modules: {
